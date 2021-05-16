@@ -37,7 +37,6 @@ def analyze_bmi(request, **kwargs):
     response_data = []
     for value in data:
         if value.component_name == 'hw':
-            
             height_and_weight = value.component_value.split('/')
             if len(height_and_weight) > 1:
                 feet_to_metres = float(height_and_weight[0]) * 0.4536
@@ -45,6 +44,9 @@ def analyze_bmi(request, **kwargs):
                 bmi_value = ClinicalData()
                 bmi_value.component_name = 'bmi'
                 bmi_value.component_value = bmi
+                bmi_value.measured_date_time = value.measured_date_time
+                bmi_value.patient_id = value.patient_id
                 response_data.append(bmi_value)
+        print(response_data)
         response_data.append(value)
     return render(request, 'clinicalDataApp/generate_patient_report.html', {'data':response_data})

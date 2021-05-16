@@ -20,9 +20,9 @@ from clinicalDataApp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.PatientListView.as_view(), name='index'),
-    path('create/', views.PatientCreateView.as_view()),
-    path('update/<int:pk>/', views.PatientUpdateView.as_view()),
-    path('delete/<int:pk>/', views.PatientDeleteView.as_view()),
-    path('add-data/<int:pk>/', views.add_data),
-    path('analyze-bmi/<int:pk>/', views.analyze_bmi),
+    path('create/', views.PatientCreateView.as_view(), name='add_patient'),
+    path('update/<int:pk>/', views.PatientUpdateView.as_view(), name='update_patient'),
+    path('delete/<int:pk>/', views.PatientDeleteView.as_view(), name='delete_patient'),
+    path('add-data/<int:pk>/', views.add_data, name='add_patient_data'),
+    path('analyze-bmi/<int:pk>/', views.analyze_bmi, name='analyze_patient_bmi'),
 ]

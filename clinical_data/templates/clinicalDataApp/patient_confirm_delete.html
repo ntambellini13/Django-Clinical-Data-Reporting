@@ -1,11 +1,15 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/clinical_data.css' %}"/>
+</head>
 
 <body>
-    <h2>Delete patient {{ patient.first_name }} ?</h2>
+    <h2>Delete patient {{ patient }} ?</h2>
     <form method="post">
-        <input type="submit" value="Confirm">
-        <a href="/">Cancel</a>
+        <input class='save' type="submit" value="Confirm">
+        <a class='cancel' href="/">Cancel</a>
         {% csrf_token %}
     </form>
 </body>

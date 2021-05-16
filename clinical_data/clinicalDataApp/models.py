@@ -15,4 +15,6 @@ class ClinicalData(models.Model):
     measured_date_time = models.DateTimeField(auto_now_add=True)
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE)   
 
+    def __str__(self):
+        return self.patient.first_name + ' ' + self.patient.last_name + ' ' + self.component_name
 
