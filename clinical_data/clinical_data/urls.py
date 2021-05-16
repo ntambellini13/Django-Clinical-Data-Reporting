@@ -24,4 +24,5 @@ urlpatterns = [
     path('update/<int:pk>/', views.PatientUpdateView.as_view()),
     path('delete/<int:pk>/', views.PatientDeleteView.as_view()),
     path('add-data/<int:pk>/', views.add_data),
+    path('analyze-bmi/<int:pk>/', views.analyze_bmi),
 ]
