@@ -1,5 +1,5 @@
 # Django-Clinical-Data-Reporting
-Very basic styling, focus on implementing different parts of Django including
+Very basic styling, focus is on implementing different parts of Django including
 Forms, Views, Templates
 
 1) Create your mysql image using the following command
