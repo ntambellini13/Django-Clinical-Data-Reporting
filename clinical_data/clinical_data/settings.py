@@ -80,9 +80,11 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'clinicaldatadb',
         'USER': 'root',
-        'PASSWORD': 'password1234'
+        'PASSWORD': 'test1234',
+        'HOST': 'docker-mysql'
     }
 }
+
 
 
 # Password validation
